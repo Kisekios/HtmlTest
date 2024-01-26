@@ -1,155 +1,30 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Html/css</title>
     <meta name="description" content="curso de html de platzi">
     <meta name="robots" content="index,follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de html</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header>
-        <nav></nav>
+        <nav>
+            <ul class="main-nav">
+                <li class="main-nav__item"><a href="">Home</a></li>
+                <li class="main-nav__item"><a href="">Cursos</a></li>
+                <li class="main-nav__item"><a href="">Instructores</a></li>
+                <li class="main-nav__item"><a href="">Blog</a></li>
+            </ul>
+        </nav>
     </header>
-
     <main>
-        <section hidden id="listas">
-            <article>
-                <h1>Soy la lista del super!</h1>
-                <ul>
-                    <li>Frutas
-                        <ol>
-                            <li><a
-                                    href="https://www.google.com/search?q=Pastel+de+manzana&sca_esv=c60dab5b25f63d56&sca_upv=1&sxsrf=ACQVn0_jibvEzein4li5BLOfiS3QPI3l5Q%3A1706135207551&ei=p46xZcGZIc_5wbkPk-6lmAI&ved=0ahUKEwiBifD3iPeDAxXPfDABHRN3CSMQ4dUDCBA&uact=5&oq=Pastel+de+manzana&gs_lp=Egxnd3Mtd2l6LXNlcnAiEVBhc3RlbCBkZSBtYW56YW5hSABQAFgAcAB4AJABAJgBAKABAKoBALgBA8gBAOIDBBgAIEE&sclient=gws-wiz-serp">Manzana</a>
-                            </li>
-                            <li><a
-                                    href="https://www.google.com/search?q=platano+aborrajado&sca_esv=c60dab5b25f63d56&sca_upv=1&sxsrf=ACQVn0_HXW7zOrynp_YytIXzrnStLQf5KA%3A1706135238786&ei=xo6xZdTTL7-AkvQP3p296Ac&oq=Platano+abo&gs_lp=Egxnd3Mtd2l6LXNlcnAiC1BsYXRhbm8gYWJvKgIIADIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHki5LlAAWKgkcAF4AZABAJgB6wGgAYoOqgEGMC4xMS4xuAEDyAEA-AEBwgIKECMYgAQYigUYJ8ICChAuGEMYgAQYigXCAgoQABiABBiKBRhDwgIKEC4YgAQYigUYQ8ICGRAuGEMYgAQYigUYlwUY3AQY3gQY3wTYAQHCAgsQABiABBixAxiDAcICFBAuGIAEGLEDGIMBGMcBGK8BGI4FwgIOEC4YgAQYsQMYxwEYrwHCAhEQLhiABBixAxiDARjHARjRA8ICCBAAGIAEGLEDwgILEC4YgAQYxwEYrwHCAhkQLhiABBiKBRhDGJcFGNwEGN4EGN8E2AEBwgIQEAAYgAQYigUYQxixAxiDAcICBRAuGIAEwgIQEAAYgAQYigUYsQMYgwEYCsICBxAuGAoYgATCAgcQABiABBgKwgIKEAAYgAQYChixA8ICDRAAGIAEGAoYsQMYgwHCAgsQLhiDARixAxiABOIDBBgAIEG6BgYIARABGBQ&sclient=gws-wiz-serp">Platano</a>
-                            </li>
-                        </ol>
-                    </li>
-                    <li>Carnes
-                        <ol>
-                            <li><a
-                                    href="https://www.google.com/search?q=sudado+de+pollo&sca_esv=c60dab5b25f63d56&sca_upv=1&sxsrf=ACQVn094uksRHDPgOloUNwIIB9s9ZEcZ6Q%3A1706135151427&ei=b46xZa7OGZ7_wbkPlfCT-AI&oq=sudado+de+&gs_lp=Egxnd3Mtd2l6LXNlcnAiCnN1ZGFkbyBkZSAqAggASABQAFgAcAB4AJABAJgBAKABAKoBALgBA8gBAOIDBBgAIEE&sclient=gws-wiz-serp">Pollo</a>
-                            </li>
-                            <li><a
-                                    href="https://www.google.com/search?q=Pasta+con+carne+molida&sca_esv=c60dab5b25f63d56&sca_upv=1&sxsrf=ACQVn09KsiaR8gANlPSn7NohfqKHSFIwiQ%3A1706135175367&ei=h46xZaCBFt3qkvQP9reQmAc&ved=0ahUKEwjg4MPoiPeDAxVdtYQIHfYbBHMQ4dUDCBA&uact=5&oq=Pasta+con+carne+molida&gs_lp=Egxnd3Mtd2l6LXNlcnAiFlBhc3RhIGNvbiBjYXJuZSBtb2xpZGEyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESPcaUABY1hhwAHgBkAEAmAGOAaABuhWqAQQwLjIyuAEDyAEA-AEBwgIKECMYgAQYigUYJ8ICBBAjGCfCAgoQABiABBiKBRhDwgIKEC4YgAQYigUYQ8ICERAuGIAEGLEDGIMBGMcBGNEDwgILEAAYgAQYsQMYgwHCAgUQLhiABMICEBAAGIAEGIoFGEMYsQMYgwHCAhAQLhiABBiKBRhDGLEDGIMBwgILEC4YgAQYsQMYgwHCAggQABiABBixA8ICChAAGIAEGBQYhwLiAwQYACBB&sclient=gws-wiz-serp">Carne
-                                    molida</a></li>
-                        </ol>
-                    </li>
-                    <li>Verduras
-                        <ol>
-                            <li><a
-                                    href="https://www.google.com/search?q=jugo+de+lim%C3%B3n&sca_esv=c60dab5b25f63d56&sca_upv=1&sxsrf=ACQVn0-BtVFG_6PBlQmxnJ2NrG6oxOhSTg%3A1706135107513&source=hp&ei=Q46xZbqOHYSXwbkPurOCqAc&iflsig=ANes7DEAAAAAZbGcU6tzI0_-l_fD_eaiBqwa3Ob62h7x&gs_ssp=eJzj4tLP1TcwSU9PM640YHRg8OLLKk3PV0hJVcjJzD28OQ8AhWoJ0Q&oq=Jugo+de+&gs_lp=Egdnd3Mtd2l6IghKdWdvIGRlICoCCAAyCxAuGIAEGLEDGIMBMggQLhiABBixAzIIEC4YgAQYsQMyCxAuGIAEGLEDGIMBMgsQABiABBixAxiDATILEC4YgAQYsQMYgwEyCxAuGIAEGLEDGIMBMgUQABiABDIFEAAYgAQyBRAAGIAESPofUK0HWLoQcAF4AJABAJgBvQGgAbgIqgEDMC44uAEDyAEA-AEBqAIKwgIHECMY6gIYJ8ICChAjGIAEGIoFGCfCAgQQIxgnwgIREC4YgAQYsQMYgwEYxwEY0QPCAg4QLhiABBiKBRixAxiDAcICCBAAGIAEGLEDwgIOEAAYgAQYigUYsQMYgwHCAhQQLhiABBixAxiDARjHARivARiOBcICCBAuGLEDGIAEwgILEC4YgAQYxwEYrwE&sclient=gws-wiz">Limon</a>
-                            </li>
-                            <li><a
-                                    href="https://www.google.com/search?q=sopa+de+zanahoria&sca_esv=c60dab5b25f63d56&sca_upv=1&sxsrf=ACQVn0_xEvhB0CNhRN0VatYxUD77fP4mpg%3A1706135114270&ei=So6xZbmPENjZwbkPgfO_uAo&oq=Sopa+de+za&gs_lp=Egxnd3Mtd2l6LXNlcnAiClNvcGEgZGUgemEqAggAMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEC4YgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEi1LVAAWPwicAR4AZABAJgBpgGgAbwMqgEEMC4xMrgBA8gBAPgBAagCE8ICCBAAGIAEGLEDwgIOEC4YgAQYsQMYxwEY0QPCAhEQLhiABBixAxiDARjHARjRA8ICDhAuGIAEGIoFGLEDGIMBwgILEAAYgAQYsQMYgwHCAg4QABiABBiKBRixAxiDAcICCxAuGIAEGLEDGIMBwgIKEAAYgAQYigUYQ8ICChAuGIAEGIoFGEPCAgcQIxjqAhgnwgIHEC4Y6gIYJ8ICExAAGIAEGIoFGEMY6gIYtALYAQHCAhYQLhiABBiKBRhDGMgDGOoCGLQC2AECwgIKECMYgAQYigUYJ8ICBBAjGCfCAg0QABiABBiKBRhDGMkDwgILEAAYgAQYigUYkgPCAhAQABiABBiKBRhDGLEDGMkDwgIQEC4YgAQYigUYQxixAxiDAcICDRAAGIAEGIoFGEMYsQPCAg0QLhiABBiKBRhDGLEDwgIfEC4YgAQYigUYQxixAxiDARiXBRjcBBjeBBjfBNgBA-IDBBgAIEG6BgYIARABGAG6BgYIAhABGAi6BgYIAxABGBQ&sclient=gws-wiz-serp">Zanahoria</a>
-                            </li>
-                        </ol>
-                    </li>
-                </ul>
-            </article>
-        </section>
 
-        <section hidden id="imagenes">
-            <figure>
-                <img width="100%" src="./imagenes/miku2.jpg"
-                    alt="miku chibi con traje de maid con una expresion alegre">
-                <figcaption>Miku chibi traje de maid</figcaption>
-            </figure>
-            <figure>
-                <img width="100%" src="./imagenes/miku.jpg" alt="miku chibi sentada con una expresion de molesta">
-                <figcaption>Miku sentada con una expresion de molesta</figcaption>
-            </figure>
-        </section>
-
-        <section hidden id="videos">
-            <video width="100%" controls preload="auto">
-                <source src="./videos/FateGOLinkinParkInTheEnd.mp4#t=6,45">
-            </video>
-        </section>
-
-        <section hidden id="formularios">
-            <form hidden action="" id="form-basicos">
-                <label for="nombre">
-                    <span>Nombre:</span>
-                    <input type="text" id="nombre" placeholder="Tu nombre">
-                </label>
-                <label for="dia">
-                    <span>Dia de inicio:</span>
-                    <input type="date" id="dia">
-                </label>
-                <label for="horario">
-                    <span>Horario deseado:</span>
-                    <input type="time" id="horario">
-                </label>
-            </form>
-
-            <form hidden action="" id="calendarios">
-                <label for="hora">
-                    <span>Hora</span>
-                    <input type="time" id="hora" name="hora">
-                </label>
-                <label for="dia">
-                    <span>día</span>
-                    <input type="date" id="dia" name="dia">
-                </label>
-                <label for="semana">
-                    <span>Semana</span>
-                    <input type="week" id="semana" name="semana">
-                </label>
-                <label for="mes">
-                    <span>Mes</span>
-                    <input type="month" id="mes" name="mes">
-                </label>
-                <label for="calendario">
-                    <span>Calendario</span>
-                    <input type="datetime-local" id="calendario" name="calendario">
-                </label>
-                <input type="submit">
-
-            </form>
-
-            <form action="" id="form-autocompletar-info"><!-- requirido, select -->
-                <label for="nombre">
-                    <span>Nombre:</span>
-                    <input type="text" name="nombre" id="nombre" autocomplete="name" required>
-                </label>
-                <label for="correo">
-                    <span>Correo:</span>
-                    <input type="email" name="correo" id="correo" autocomplete="email"required>
-                </label>
-                <label for="pais">
-                    <span>Pais:</span>
-                    <input list="pais" name="pais" required>
-                    <datalist id="pais">
-                        <option value="colombia">Colombia</option>
-                        <option value="mexico">Mexico</option>
-                        <option value="ecuador">Ecuador</option>
-                        <option value="peru">Peru</option>
-                    </datalist>
-                </label>
-                <label for="cp">
-                    <span>Codigo postal</span>
-                    <input type="number" name="cp" id="cp" autocomplete="postal-code" required>
-                </label>
-                <input type="submit">
-            </form>
-        </section>
-
-        <section id="botones">
-            <input type="submit" value="Enviarlo">
-            <button>Enviarlo</button>
-        </section>
-        
     </main>
-
-    <footer>
-
-    </footer>
+    <footer></footer>
 </body>
 
 </html>

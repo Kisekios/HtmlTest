@@ -1,0 +1,51 @@
+body {
+    background-color: gray;
+    /* color de fondo */
+}
+
+* {
+    /* Elemento universal */
+    box-sizing: border-box; /* calcular automaticamente el ancho de pantalla */
+    padding: 0px;
+    margin: 0px;
+}
+
+.main-nav {
+    margin-top: 10px;
+    list-style: none;
+    background-color: #13a4a4;
+    width: 100%;
+    padding: 10px 20px;
+    border: 3px solid white
+}
+
+.main-nav__item {
+    display: inline-block;
+
+}
+
+.main-nav__item a {
+
+    color: yellow;
+    padding-left: 1px;
+    border-radius: 30%;
+    /* bordes */
+    text-decoration: none;
+    /* quitar subrayado (por ser link) */
+}
+
+/* pseudo clases ( : ) */
+.main-nav__item a:hover {
+    /* el hover es una acciones cuando el cursor esta por encima */
+    color: white;
+}
+
+.main-nav__item a:active {
+    color: red;
+}
+
+/* pseudo elementos  ( :: )*/
+.main-nav__item a::after {
+    padding: 0px 20px;
+    content: " | ";
+}
