@@ -1,3 +1,7 @@
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 body {
     background-color: gray;
     /* color de fondo */
@@ -5,27 +9,40 @@ body {
 
 * {
     /* Elemento universal */
-    box-sizing: border-box; /* calcular automaticamente el ancho de pantalla */
-    padding: 0px;
-    margin: 0px;
+    box-sizing: border-box;
+    /* calcular automaticamente el ancho de pantalla */
+    padding: 0;
+    margin: 0;
 }
 
-.main-nav {
+/*  Titulo Pagina */
+
+header h1 {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+/* Barra de navegacion superior */
+
+nav ul {
     margin-top: 10px;
     list-style: none;
     background-color: #13a4a4;
     width: 100%;
     padding: 10px 20px;
-    border: 3px solid white
+    border: 3px solid white;
+    border-radius: 10px;
 }
 
-.main-nav__item {
+nav li {
     display: inline-block;
-
 }
 
-.main-nav__item a {
-
+nav a {
     color: yellow;
     padding-left: 1px;
     border-radius: 30%;
@@ -35,17 +52,17 @@ body {
 }
 
 /* pseudo clases ( : ) */
-.main-nav__item a:hover {
+nav a:hover {
     /* el hover es una acciones cuando el cursor esta por encima */
     color: white;
 }
 
-.main-nav__item a:active {
+nav a:active {
     color: red;
 }
 
 /* pseudo elementos  ( :: )*/
-.main-nav__item a::after {
+nav a::after {
     padding: 0px 20px;
     content: " | ";
 }
