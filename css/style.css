@@ -1,3 +1,11 @@
+* {
+    /* Elemento universal */
+    box-sizing: border-box;
+    /* calcular automaticamente el ancho de pantalla */
+    padding: 0;
+    margin: 0;
+}
+
 html {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -7,33 +15,30 @@ body {
     /* color de fondo */
 }
 
-* {
-    /* Elemento universal */
-    box-sizing: border-box;
-    /* calcular automaticamente el ancho de pantalla */
-    padding: 0;
-    margin: 0;
-}
-
 /*  Titulo Pagina */
-
-header h1 {
+h1 {
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-    padding-left: 5%;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    width: 80%;
+    margin: 10px auto;
     color: white;
 }
 
 /* Barra de navegacion superior */
 
+nav {
+    width: 460px;
+    padding-left: 10px;
+    min-width: 460px;
+}
+
 nav ul {
     margin-top: 10px;
     list-style: none;
     background-color: #13a4a4;
-    width: 100%;
-    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 18px;
     border: 3px solid white;
     border-radius: 10px;
 }
@@ -65,4 +70,42 @@ nav a:active {
 nav a::after {
     padding: 0px 20px;
     content: " | ";
+}
+
+/* MAIN */
+
+section {
+    width: 70%;
+    margin: 10% auto;
+}
+
+
+
+h4 {
+    color: yellow;
+    width: 140px;
+    margin: 10px auto;
+    background-color: #13a4a4;
+    padding: 10px;
+}
+
+section>div {
+    position: relative;
+    background-color: #13a4a4;
+    width: 200px;
+    padding: 10px;
+    margin: 0 auto;
+    border: 3px solid white;
+    border-radius: 25px;
+    top: 40px;
+
+}
+
+section>article{
+
+    background-color: white ;
+    padding: 50px;
+    border: 2px solid black;
+    border-radius: 60px; 
+    bottom: 20px;
 }
