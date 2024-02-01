@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ===========HEADER=========== */
+
+/* HEADER
+→ div
+*/
+
+header {
+  width: 100dvw;
+  height: 15dvh;
+  background: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* DIV
+→ nav
+*/
+
+header>div {
+  background: white;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+header>div>nav {
+  width: 80%;
+  height: 90%;
+  background: #47cfcf;
+}
+
+/* ===========MAIN=========== */
+
+/* MAIN
+→ div
+→ aside
+→ div
+ */
+
+main {
+  width: 100dvw;
+  height: 70dvh;
+  background-color: aquamarine;
+  display: flex;
+}
+
+/* ===========M1=========== */
+
+/* DIV
+→ div
+→ div
+*/
+
+main>div:nth-of-type(1) {
+  width: 70%;
+  height: 95%;
+  background: white;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+main>div:nth-of-type(1)>div {
+  width: 35%;
+  height: 95%;
+  background: black;
+
+}
+
+main>div:nth-of-type(1)>section {
+  width: 60%;
+  height: 95%;
+  background: black;
+
+}
+
+/* ===========M2=========== */
+
+/* ASIDE
+→ div
+→ div
+→ div
+→ div
+→ div
+*/
+
+main>aside {
+  width: 25%;
+  height: 95%;
+  background: black;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+main>aside>div {
+  width: 80%;
+  height: 18%;
+  background: white;
+}
+
+/* ===========FOOTER=========== */
+
+footer {
+  width: 100dvw;
+  height: 15dvh;
+  background-color: blue;
+}
