@@ -57,13 +57,13 @@ header>div>nav {
   height: 12dvh;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 /* ===========H1.1.1=========== */
 
 header>div>nav>div:nth-of-type(1){
-  width: 20%;
+  width: 15%;
   height: 90%;
   background: var(--fourth-color);
 }
@@ -73,13 +73,14 @@ header>div>nav>div:nth-of-type(1){
 header>div>nav>div:nth-of-type(2){
   width: 50%;
   height: 90%;
+  margin-left: 5%;
   background: var(--fourth-color);
 }
 
 /* ===========H1.1.3=========== */
 
 header>div>nav>div:nth-of-type(3){
-  width: 25%;
+  width: 20%;
   height: 90%;
   background: var(--fourth-color);
 }
