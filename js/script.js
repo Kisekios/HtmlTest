@@ -5,7 +5,7 @@ const containerSongs = document.querySelector('.container-music');
 const playSong = document.querySelector('.play-pause-btn');
 const volumenBtn = document.querySelector('.volumen');
 const songs = document.getElementsByClassName('song');
-const barIcon = document.createElement('span')
+const barIcon = document.createElement('span');
 
 
 /* Variables globales */
@@ -17,14 +17,14 @@ let reproduciendoSong = false;
 let cancion;
 
 
-/* Acciones/Funciones de insercion al HTML */
+/* Acciones/Funciones de inserción al HTML */
 
 
 barIcon.classList.add('material-icons');
 barIcon.id = 'icon';
 playSong.appendChild(barIcon)
 
-function playOrPause() { //Cambio de boton en el html
+function playOrPause() { //Cambio de botón en el html
     if (cancion === undefined || reproduciendoSong === false) {
         const cambio = document.getElementById('icon')
         cambio.textContent = 'play_circle'
@@ -52,7 +52,7 @@ function renderSongs(arreglo) {
 }
 
 
-/* Funciones de reproduccion/pausa/volumen */
+/* Funciones de reproducción/pausa/volumen */
 
 
 function reproducirSong() {
@@ -77,7 +77,7 @@ function playing(cancion) {
     }
 }
 
-function pausebtn (){
+function pausebtn() {
     audio.pause();
     reproduciendoSong = false;
     playOrPause();
@@ -100,7 +100,7 @@ playSong.addEventListener('click', function () {
 /* Lista de canciones */
 
 
-songList.push(`Vonikk Phoenix`)
+songList.push('Vonikk Phoenix')
 songList.push('Vonikk Adrenalize')
 songList.push('Vonikk Nova')
 songList.push('Vonikk Submarin')

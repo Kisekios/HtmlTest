@@ -1,7 +1,6 @@
 :root {
   --primary-color: #071952;
-  --secundary-color: #0B666A;
-  ;
+  --second-color: #0B666A;
   --third-color: #35A29F;
   --fourth-color: #97FEED;
   --text-color: #242422;
@@ -92,17 +91,17 @@ header>div>nav>div:nth-of-type(3) {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   grid-template-areas:
-    "texto texto texto"
+    "text text text"
     " . . ."
-    " btn volumenBar volumenBar";
+    " btn volBar volBar";
 }
 
 header>div>nav>div:nth-of-type(3)>p {
-  grid-area: texto;
+  grid-area: text;
 }
 
 header>div>nav>div:nth-of-type(3)>input {
-  grid-area: volumenBar;
+  grid-area: volBar;
   width: 80%;
 }
 
@@ -123,7 +122,7 @@ header>div>nav>div:nth-of-type(3)>button {
 main {
   width: 100%;
   height: 85%;
-  background-color: var(--secundary-color);
+  background-color: var(--second-color);
   display: flex;
   align-items: center;
 }
@@ -135,12 +134,13 @@ main {
 → div
 */
 
-main>div:nth-of-type(1) {
+main>div {
   width: 80%;
   height: 95%;
   display: flex;
   justify-content: space-around;
 }
+
 
 /* ===========M1.1=========== */
 
@@ -151,7 +151,7 @@ main>div:nth-of-type(1) {
 → div
 */
 
-main>div:nth-of-type(1)>section:nth-of-type(1) {
+main>div>section:nth-of-type(1) {
   width: 35%;
   height: 100%;
   display: flex;
@@ -244,10 +244,10 @@ main>aside>div {
   align-items: center;
 }
 
-main>aside>div>img{
- width: 100%;
- height: 100%;
- overflow: hidden;
+main>aside>div>img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 /* ===========FOOTER=========== */
