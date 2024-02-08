@@ -1,0 +1,123 @@
+/* VARIABLES ROOT */
+
+:root {}
+
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    width: 100dvw;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+
+
+/* ===========HEADER=========== */
+
+/* HEADER
+→ section
+→ nav 
+*/
+
+header {
+    width: 100%;
+    height: 12rem;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+}
+
+/* ===========H1=========== */
+
+/* SECTION
+→ div
+*/
+
+header>section {
+    width: 100%;
+    height: 4rem;
+    display: grid;
+    background-color: #47cfac;
+}
+
+/* ===========H1.1=========== */
+
+/* DIV
+→ a → span
+→ a → span
+→ a → span
+→ a → span
+→ a → span
+*/
+
+header>section>div {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-self: end;
+}
+
+header>section>div>a>span {
+    color: white;
+}
+
+/* ===========H2=========== */
+
+/* NAV
+→ section → a → img img
+→ section → a
+*/
+
+header>nav {
+    display: grid;
+    height: 8rem;
+    grid-template: 1fr / 1fr 1fr;
+    align-items: center;
+}
+
+header>nav>section:nth-of-type(1) {
+    margin-left: 20%;
+}
+
+
+header>nav>section:nth-of-type(1)>a>img {
+    height: 8rem;
+    border-radius: 10%;
+}
+
+header>nav>section:nth-of-type(2) {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25%;
+}
+
+header>nav>section:nth-of-type(2)>a{
+    border-bottom: 2px solid black;  
+}
+
+
+/* ===========MAIN=========== */
+
+
+
+/* ===========FOOTER=========== */
