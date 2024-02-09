@@ -1,6 +1,11 @@
 /* VARIABLES ROOT */
 
-:root {}
+:root {
+    --color-primario: #0957b1;
+    --color-secundario: #e9f3ff;
+    --color-tercero: #25d0ea;
+    --color-text-primario: hsl(240 100% 50% / 1);
+}
 
 
 /* GENERAL */
@@ -24,14 +29,11 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-}
 
-a {
-    text-decoration: none;
-    display: inline;
-    color: black;
+    & a {
+        text-decoration: none;
+    }
 }
-
 
 /* ===========HEADER=========== */
 
@@ -50,41 +52,34 @@ header {
 /* ===========H1=========== */
 
 /* SECTION
-→ div
+→ div → a*5 → span
+
+---> cada "a" contiene un span
 */
 
 header>section {
     width: 100%;
     height: 4rem;
     display: grid;
-    background-color: #47cfac;
-}
+    background-color: var(--color-primario);
 
-/* ===========H1.1=========== */
+    /* ===========H1.1=========== */
+    >div {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-self: end;
 
-/* DIV
-→ a → span
-→ a → span
-→ a → span
-→ a → span
-→ a → span
-*/
-
-header>section>div {
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-self: end;
-}
-
-header>section>div>a>span {
-    color: white;
+        >a>span {
+            color: white;
+        }
+    }
 }
 
 /* ===========H2=========== */
 
 /* NAV
-→ section → a → img img
+→ section → a → img
 → section → a
 */
 
@@ -93,31 +88,132 @@ header>nav {
     height: 8rem;
     grid-template: 1fr / 1fr 1fr;
     align-items: center;
+    background-color: var(--color-secundario);
+
+    >section {
+
+        &:nth-of-type(1) {
+            margin-left: 20%;
+
+            >a>img {
+                height: 8rem;
+                border-radius: 10%;
+                box-shadow: 0 0 3px 2px var(--color-tercero);
+            }
+        }
+
+        &:nth-of-type(2) {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 25%;
+
+            >a {
+                font-weight: bold;
+                border-bottom: 3px solid var(--color-text-primario);
+                color: var(--color-text-primario);
+                font-style: italic;
+                
+                &:hover {
+                    box-shadow: inset 0 0 10px 5px white,
+                    0 0 15px 15px white;
+                }
+            }
+        }
+    }
 }
-
-header>nav>section:nth-of-type(1) {
-    margin-left: 20%;
-}
-
-
-header>nav>section:nth-of-type(1)>a>img {
-    height: 8rem;
-    border-radius: 10%;
-}
-
-header>nav>section:nth-of-type(2) {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 25%;
-}
-
-header>nav>section:nth-of-type(2)>a{
-    border-bottom: 2px solid black;  
-}
-
 
 /* ===========MAIN=========== */
 
+/* MAIN
+→ img
+→ section ...
 
+*/
+
+.home-main {
+    width: 100dvw;
+    height: 82dvh;
+    display: flex;
+    justify-content: center;
+
+    /* ===========M1=========== */
+    >img {
+        height: 82dvh;
+        aspect-ratio: 1280 / 720;
+        z-index: -1;
+        position: absolute;
+    }
+}
+
+/* ===========M2=========== */
+
+/* SECTION
+→ p
+→ button ...
+*/
+
+.home-main>section {
+    height: 80dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* ===========M2.1=========== */
+    >p {
+        font-size: 4.8rem;
+        font-style: italic;
+        font-weight: bolder;
+        color: var(--color-text-primario);
+        border-radius: 5%;
+        box-shadow: 0px 1px 5px 5px white,
+            inset 0px 00px 30px 10px white;
+        margin-bottom: 300px;
+    }
+}
+
+/* ===========M2.2=========== */
+
+/* BUTTON
+→ a → span
+*/
+
+.home-main>section>button {
+    align-self: center;
+    width: 15rem;
+    border: 0;
+    background-image: linear-gradient(150deg,
+            #f9e3d9,
+            var(--color-tercero),
+            #a7c7d6);
+    border-radius: 1rem;
+    display: flex;
+    font-size: 1.8rem;
+    padding: .6rem;
+    cursor: pointer;
+    transition: 300ms;
+    box-shadow: 0 0 10px 5px var(--color-tercero);
+
+    >a {
+        background-color: #111111fd;
+        padding: 1rem 2rem;
+        border-radius: .6rem;
+        transition: 300ms;
+
+        >span {
+            color: white;
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+
+    &:active {
+        transform: scale(2);
+    }
+
+    &:hover>a {
+        font-weight: bolder;
+        background: none;
+    }
+}
 
 /* ===========FOOTER=========== */
