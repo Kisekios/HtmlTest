@@ -31,6 +31,12 @@ body {
 
     & a {
         text-decoration: none;
+        font-size: 1.6rem;
+        color: black;
+    }
+
+    & p {
+        font-size: 1.6rem;
     }
 
     & h1 {
@@ -47,6 +53,14 @@ body {
 
     & h4 {
         font-size: 2.5rem;
+    }
+
+    & h5 {
+        font-size: 2rem;
+    }
+
+    & h6 {
+        font-size: 1.5rem;
     }
 
     & img {
@@ -66,51 +80,46 @@ header {
     height: 12rem;
     display: grid;
     grid-template: 1fr 1fr / 1fr;
-}
 
-/* ===========H1=========== */
 
-/* SECTION
-→ div → a*5 → span
+    /* ===========H1=========== */
+    /* SECTION
+    → div → a*5 → span
+    ---> cada "a" contiene un span
+    */
+    >section {
+        height: 4rem;
+        display: grid;
+        background-color: var(--color-primario);
+        box-shadow: inset 0px 0px 20px 1px var(--color-tercero);
 
----> cada "a" contiene un span
-*/
+        /* ===========H1.1=========== */
+        >div {
+            width: 30rem;
+            display: flex;
+            align-items: center;
+            justify-self: end;
 
-header>section {
-    height: 4rem;
-    display: grid;
-    background-color: var(--color-primario);
-
-    /* ===========H1.1=========== */
-    >div {
-        width: 30rem;
-        display: flex;
-        align-items: center;
-        justify-self: end;
-
-        >a>span {
-            color: white;
+            >a>span {
+                color: white;
+            }
         }
     }
-}
 
-/* ===========H2=========== */
+    /* ===========H2=========== */
+    /* NAV
+    → section → a → img
+    → section → a
+    */
+    >nav {
+        display: grid;
+        height: 8rem;
+        grid-template: 1fr / 1fr 1fr;
+        align-items: center;
+        background-color: var(--color-secundario);
 
-/* NAV
-→ section → a → img
-→ section → a
-*/
+        >section:nth-of-type(1) {
 
-header>nav {
-    display: grid;
-    height: 8rem;
-    grid-template: 1fr / 1fr 1fr;
-    align-items: center;
-    background-color: var(--color-secundario);
-
-    >section {
-
-        &:nth-of-type(1) {
             margin-left: 20%;
 
             >a>img {
@@ -119,7 +128,7 @@ header>nav {
             }
         }
 
-        &:nth-of-type(2) {
+        >section:nth-of-type(2) {
             display: flex;
             justify-content: flex-end;
             margin-right: 25%;
@@ -140,14 +149,12 @@ header>nav {
     }
 }
 
+
 /* ===========MAIN=========== */
 /* ===========MAIN-INDEX=========== */
 
-
 /* MAIN
-→ img
 → section ...
-
 */
 
 .home-main {
@@ -158,77 +165,75 @@ header>nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
-}
 
-/* ===========M1=========== */
-
-/* SECTION
-→ p
-→ button ...
-*/
-
-.home-main>section {
-    height: 80dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    /* ===========M1.1=========== */
-    >p {
-        display: flex;
-        justify-content: center;
-        width: 45rem;
-        font-size: 4.5rem;
-        font-family: serif;
-        font-style: italic;
-        font-weight: bolder;
-        color: var(--color-text-primario);
-        border-radius: 5%;
-        box-shadow: 0 0 2rem 1rem white,
-            inset 0px 0px 3rem 1rem white;
-        margin-bottom: 30rem;
-    }
-
-    /* ===========M1.2=========== */
-    /* BUTTON
-    → a → span
+    /* ===========M1=========== */
+    /* SECTION
+    → p
+    → button → a → span 
     */
-    >button {
-        align-self: center;
-        width: 15rem;
-        border: 0;
-        background-image: linear-gradient(150deg,
-                #f9e3d9,
-                var(--color-tercero),
-                #a7c7d6);
-        border-radius: 1rem;
+    >section {
+        height: 80dvh;
         display: flex;
-        font-size: 1.8rem;
-        padding: .6rem;
-        cursor: pointer;
-        transition: 300ms;
-        box-shadow: 0 0 1rem .5rem var(--color-tercero);
+        flex-direction: column;
+        justify-content: center;
 
-        >a {
-            background-color: #111111fd;
-            padding: 1rem 2rem;
-            border-radius: .6rem;
-            transition: 300ms;
-
-            >span {
-                color: white;
-                font-weight: bold;
-
-            }
-        }
-
-        &:active {
-            transform: scale(2);
-        }
-
-        &:hover>a {
+        /* ===========M1.1=========== */
+        >p {
+            display: flex;
+            justify-content: center;
+            width: 45rem;
+            font-size: 4.5rem;
+            font-family: serif;
+            font-style: italic;
             font-weight: bolder;
-            background: none;
+            color: var(--color-text-primario);
+            border-radius: 5%;
+            box-shadow: 0 0 2rem 1rem white,
+                inset 0px 0px 3rem 1rem white;
+            margin-bottom: 30rem;
+        }
+
+        /* ===========M1.2=========== */
+        /* BUTTON
+        → a → span
+        */
+        >button {
+            align-self: center;
+            width: 15rem;
+            border: 0;
+            background-image: linear-gradient(150deg,
+                    #f9e3d9,
+                    var(--color-tercero),
+                    #a7c7d6);
+            border-radius: 1rem;
+            display: flex;
+            font-size: 1.8rem;
+            padding: .6rem;
+            cursor: pointer;
+            transition: 300ms;
+            box-shadow: 0 0 1rem .5rem var(--color-tercero);
+
+            >a {
+                background-color: #111111fd;
+                padding: 1rem 2rem;
+                border-radius: .6rem;
+                transition: 300ms;
+
+                >span {
+                    color: white;
+                    font-weight: bold;
+
+                }
+            }
+
+            &:active {
+                transform: scale(2);
+            }
+
+            &:hover>a {
+                font-weight: bolder;
+                background: none;
+            }
         }
     }
 }
@@ -238,75 +243,263 @@ header>nav {
 /* ===========MAIN-BLOGS=========== */
 
 /* MAIN
-→ section → div → h4/div ...
-→ section → h3/div ...
+→ section(expositor-container) → div*2 ...
+→ section(catalogo-container) → h3/div ...
 */
 
-.blogs-main {
+.blogs-main {}
+
+
+/* ===========MAIN=========== */
+/* ===========MAIN-BLOGS=========== */
+
+/* MAIN
+→ section → img
+→ section → h5/article ...
+→ section(contacto-container) → div*2 → img/div → a/p
+*/
+
+.blog-main {
     display: grid;
-    margin-top: 4rem;
+    row-gap: 2rem;
 
     /* ===========M1=========== */
     /* SECTION
-    → div → h4/div ...
-    → div → h2/p/a ...
+    → img
     */
     >section:nth-of-type(1) {
-        background-color: var(--color-cuarto);
-        display: inherit;
-        grid-template: 1fr/ 2fr 2.5fr;
-        padding: 2rem 10% 1rem 10%;
+        justify-self: center;
+        padding: 2rem 0;
 
-        /* ===========M1.1=========== */
-        /* DIV
+        >img {
+            width: 100%;
+        }
+    }
+
+    /* ===========M2=========== */
+    /* SECTION
+    → h5
+    → article → h2/p 
+    */
+    >section:nth-of-type(2) {
+        width: 80%;
+        justify-self: center;
+        display: inherit;
+        gap: 3rem;
+
+        >h5 {
+            padding-bottom: 1rem;
+            border-bottom: .2rem solid var(--color-cuarto);
+        }
+
+        >article {
+
+            >h2 {}
+
+            >p {
+                padding-top: 3rem;
+            }
+        }
+    }
+}
+
+
+/* ===========MAIN=========== */
+/* ===========MAIN-PERFIL=========== */
+
+/* MAIN
+→ section(expositor-container) → div*2 ...
+→ section(catalogo-container) → h3/div → article → img/h4/p/a → button
+→ section(contacto-container) → div*2 → img/div → a/p
+*/
+
+.perfil-main {}
+
+/* ===========FOOTER=========== */
+
+footer {
+    margin-top: 7rem;
+    height: 60px;
+    background-color: var(--color-primario);
+    box-shadow: 0px 20px 6rem 6rem var(--color-tercero),
+        inset 0px 0px 20px 1px var(--color-tercero);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    >h6 {
+        color: white;
+    }
+}
+
+/* ===========CLASES=========== */
+
+.home-body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.no-margin-top-footer {
+    /* 
+    → BLOG
+    → PERFIL
+    */
+    margin: 0;
+}
+
+.expositor-container {
+    /* 
+    → BLOG = M1
+    → PERFIL = M1
+    */
+    /* ===========M1=========== */
+    /* SECTION
+    → div → h4/div → img
+    → div → h2/p/a → button
+    */
+    background-color: var(--color-cuarto);
+    display: inherit;
+    grid-template: 1fr/ 2fr 2.5fr;
+    padding: 2rem 10%;
+
+    /* ===========M1.1=========== */
+    /* DIV
         → h4
         → div → img
         */
-        >div:nth-of-type(1) {
-            display: inherit;
-            grid-template: 25px 1fr/ 1fr;
-            gap: 5px 0;
+    >div:nth-of-type(1) {
+        display: inherit;
+        grid-template: 25px 1fr/ 1fr;
+        gap: 5px 0;
 
-            >h4 {
-                grid-area: 1/1;
-            }
-
-            >div {
-                grid-area: 2/1;
-
-                >img {
-                    width: 329px;
-                }
-            }
+        >h4 {
+            grid-area: 1/1;
         }
 
-        /* ===========M1.2=========== */
-        /* DIV
+        >div {
+            grid-area: 2/1;
+
+            >img {
+                width: 329px;
+            }
+        }
+    }
+
+    /* ===========M1.2=========== */
+    /* DIV
         → h2
         → p
         → a → button
         */
-        >div:nth-of-type(2) {
-            display: inherit;
-            grid-template: 50px 1fr 70px/ 1fr;
-            margin-left: 2rem;
+    >div:nth-of-type(2) {
+        display: inherit;
+        grid-template: 50px 1fr 70px/ 1fr;
+        margin-left: 2rem;
 
-            >h2 {
-                grid-area: 1/1;
-                align-self: end;
+        >h2 {
+            grid-area: 1/1;
+            align-self: end;
+        }
+
+        >p {
+            grid-area: 2/1;
+            font-size: 2rem;
+            align-self: center;
+        }
+
+        >a {
+            grid-area: 3/1;
+            align-self: center;
+            width: 60px;
+            height: 40px;
+
+            >button {
+                font-weight: bold;
+                width: 70px;
+                height: 40px;
+                border-radius: 20%;
+                border: 3px solid var(--color-secundario);
+                cursor: pointer;
+                transition: 300ms;
+                background-image: linear-gradient(150deg,
+                        var(--color-tercero),
+                        #f9e3d9,
+                        var(--color-tercero));
+
+                &:hover {
+                    background-color: var(--color-secundario);
+                    background-image: none;
+                    transition: 300ms;
+                }
+
+                &:active {
+                    transform: scale(2);
+                }
+            }
+        }
+    }
+}
+
+.catalogo-container {
+
+    /* 
+    → BLOG = M2
+    → PERFIL = M2
+    */
+    /* ===========M2=========== */
+    /* SECTION
+    → h3
+    → div → article → img/h4/p/a ...
+    */
+
+    display: inherit;
+    width: 80%;
+    margin: auto;
+
+    /* ===========M2.1=========== */
+    >h3 {
+        border-bottom: .3rem solid var(--color-cuarto);
+        margin-top: 2rem;
+        padding: 1.5rem;
+        text-align: center;
+        width: 90%;
+        justify-self: center;
+    }
+
+    /* ===========M2.2=========== */
+    >div {
+        display: inherit;
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        justify-items: center;
+        margin-top: 4rem;
+        gap: 50px 0;
+
+        >article {
+            max-width: 70%;
+            display: inherit;
+            background-color: var(--color-cuarto);
+            box-sizing: content-box;
+            padding: 1rem;
+            border-radius: 10px;
+
+            >img {
+                width: 100%;
+            }
+
+            >h4 {
+                margin: 10px 0;
             }
 
             >p {
-                grid-area: 2/1;
-                font-size: 2rem;
-                align-self: center;
+                margin-bottom: 20px;
+                font-size: 1.5rem;
             }
 
             >a {
-                grid-area: 3/1;
-                align-self: center;
-                width: 60px;
-                height: 40px;
+                justify-self: center;
 
                 >button {
                     font-weight: bold;
@@ -326,123 +519,66 @@ header>nav {
                         background-image: none;
                         transition: 300ms;
                     }
-
-                    &:active {
-                        transform: scale(2);
-                    }
                 }
             }
         }
     }
+}
 
-    /* ===========M2=========== */
-    /* SECTION
-    → h3
-    → div → article → img/h4/p/a ...
+.contacto-container {
+    /* 
+    → BLOG = M3
+    → PERFIL = M3
     */
-    >section:nth-of-type(2) {
+
+    /* ===========M3=========== */
+    /* SECTION
+    → div → img/div → a/p
+    → div → img/div → a/p
+    */
+    height: 30dvh;
+    background-color: var(--color-cuarto);
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 2.5rem;
+
+    >div {
         display: inherit;
+        width: 35%;
 
-
-        /* ===========M2.1=========== */
-        >h3 {
-            border-bottom: 3px solid var(--color-cuarto);
-            padding: 15px;
-            text-align: center;
-            width: 80%;
-            justify-self: center;
+        >img {
+            width: 10rem;
         }
 
-        /* ===========M2.2=========== */
         >div {
-            display: inherit;
-            grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-            justify-items: center;
-            margin-top: 4rem;
-            gap: 50px 0;
+            >a {
+                font-weight: bold;
+                margin-left: 1rem;
+                padding-top: 1rem;
+                border-bottom: .2rem solid black;
+            }
 
-            >article {
-                max-width: 70%;
-                display: inherit;
-                background-color: var(--color-cuarto);
-                box-sizing: content-box;
+            >p {
+                margin-top: .5rem;
                 padding: 1rem;
-                border-radius: 10px;
-
-                >img {
-                    width: 100%;
-                }
-
-                >h4 {
-                    margin: 10px 0;
-                }
-
-                >p {
-                    margin-bottom: 20px;
-                    font-size: 1.5rem;
-                }
-
-                >a {
-                    justify-self: center;
-
-                    >button {
-                        font-weight: bold;
-                        width: 70px;
-                        height: 40px;
-                        border-radius: 20%;
-                        border: 3px solid var(--color-secundario);
-                        cursor: pointer;
-                        transition: 300ms;
-                        background-image: linear-gradient(150deg,
-                                var(--color-tercero),
-                                #f9e3d9,
-                                var(--color-tercero));
-
-                        &:hover {
-                            background-color: var(--color-secundario);
-                            background-image: none;
-                            transition: 300ms;
-                        }
-                    }
-                }
             }
         }
     }
 }
 
-/* ===========FOOTER=========== */
-
-footer {
-    margin-top: 5rem;
-    height: 60px;
-    background-color: black;
-    box-shadow: 0px 20px 6rem 6rem var(--color-tercero),
-        inset 2px 4px 20px 1px var(--color-tercero);
-    ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    >h4 {
-        color: white;
-    }
-}
-
-/* ===========CLASES=========== */
-
-.home-body {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.perfil-main,
+.blogs-main {
+    display: grid;
+    margin-top: 4rem;
 }
 
 
 /* ===========QUERIES=========== */
 
 @media (max-width: 700px) {
-    .blogs-main>section:nth-of-type(1) {
+    .expositor-container {
         grid-template: 2fr/ 1fr;
         justify-items: center;
         padding: 0;
@@ -470,5 +606,3 @@ footer {
 
     }
 }
-
-@media (min-width: 900px) {}
