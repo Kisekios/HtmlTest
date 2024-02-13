@@ -1,0 +1,55 @@
+/* ===========MAIN=========== */
+/* ===========MAIN-BLOGS=========== */
+
+/* MAIN
+→ section → img
+→ section → h5/article ...
+→ section(contacto-container) → div*2 → img/div → a/p
+*/
+
+.blog-main {
+    display: grid;
+    row-gap: 2rem;
+
+    /* ===========M1=========== */
+    /* SECTION
+    → img
+    */
+    >section:nth-of-type(1) {
+        justify-self: center;
+        padding: 2rem 0;
+
+        >img {
+            width: 100%;
+        }
+    }
+
+    /* ===========M2=========== */
+    /* SECTION
+    → h5
+    → article → h2/p 
+    */
+    >section:nth-of-type(2) {
+        width: 80%;
+        justify-self: center;
+        display: inherit;
+        gap: 3rem;
+
+        >h5 {
+            padding-bottom: 1rem;
+            border-bottom: .2rem solid var(--color-cuarto);
+        }
+
+        >article {
+            display: inherit;
+
+            >h2 {}
+
+            >p {
+                justify-self: center;
+                padding-top: 3rem;
+                width: 90%;
+            }
+        }
+    }
+}

@@ -1,8 +1,34 @@
-- Primeros conceptos de Html
-- Manejo de css:
-    - display flex
-    - combinadores
-    - responsive design mobile firts
-- diseño del main para implementar JS
+* testBlog:
+- 4 HTML
+- 5 CSS 
+- carga de elementos flaticon
+- 1 assets : imagenes
 
--> Next: Manejo del main con JS (abrir y cerrar el aside y el div(2))
+→ manejo de html y css sin JS.
+→ manejo de combinadores/especificidad.
+→ manejo de clases (al mínimo), para el código que se repite en diferentes paginas.
+→ media queries para reorganización del grid según el cambio de tamaño de pantalla.
+
+* testBlog2:
+- 1 HTML
+- 1 CSS
+- 1 imagenes(dir)
+- 1 musica(dir)
+
+→ Layout de desktop.
+→ implementación de canciones.
+→ botón de reproducción y barra de volumen.
+→ implementación de imagenes en los div de las canciones
+
+* testAnimacionesCSS
+- 1 HTML
+- 1 CSS
+
+→ manejo de grid.
+→ manejo de animaciones para una visualización de imagenes
+    → scroll para ir mostrando mas imagenes
+
+
+* Se eliminaron varios archivos HTML/CSS de test pasados.
+
+-> Next: manejo de tailwind.

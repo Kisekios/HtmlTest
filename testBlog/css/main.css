@@ -149,180 +149,14 @@ header {
     }
 }
 
-
-/* ===========MAIN=========== */
-/* ===========MAIN-INDEX=========== */
-
-/* MAIN
-→ section ...
-*/
-
-.home-main {
-    height: 82dvh;
-    display: flex;
-    justify-content: center;
-    background-image: url('../assets/img/Gura.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-
-    /* ===========M1=========== */
-    /* SECTION
-    → p
-    → button → a → span 
-    */
-    >section {
-        height: 80dvh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        /* ===========M1.1=========== */
-        >p {
-            display: flex;
-            justify-content: center;
-            width: 45rem;
-            font-size: 4.5rem;
-            font-family: serif;
-            font-style: italic;
-            font-weight: bolder;
-            color: var(--color-text-primario);
-            border-radius: 5%;
-            box-shadow: 0 0 2rem 1rem white,
-                inset 0px 0px 3rem 1rem white;
-            margin-bottom: 30rem;
-        }
-
-        /* ===========M1.2=========== */
-        /* BUTTON
-        → a → span
-        */
-        >button {
-            align-self: center;
-            width: 15rem;
-            border: 0;
-            background-image: linear-gradient(150deg,
-                    #f9e3d9,
-                    var(--color-tercero),
-                    #a7c7d6);
-            border-radius: 1rem;
-            display: flex;
-            font-size: 1.8rem;
-            padding: .6rem;
-            cursor: pointer;
-            transition: 300ms;
-            box-shadow: 0 0 1rem .5rem var(--color-tercero);
-
-            >a {
-                background-color: #111111fd;
-                padding: 1rem 2rem;
-                border-radius: .6rem;
-                transition: 300ms;
-
-                >span {
-                    color: white;
-                    font-weight: bold;
-
-                }
-            }
-
-            &:active {
-                transform: scale(2);
-            }
-
-            &:hover>a {
-                font-weight: bolder;
-                background: none;
-            }
-        }
-    }
-}
-
-
-/* ===========MAIN=========== */
-/* ===========MAIN-BLOGS=========== */
-
-/* MAIN
-→ section(expositor-container) → div*2 ...
-→ section(catalogo-container) → h3/div ...
-*/
-
-.blogs-main {}
-
-
-/* ===========MAIN=========== */
-/* ===========MAIN-BLOGS=========== */
-
-/* MAIN
-→ section → img
-→ section → h5/article ...
-→ section(contacto-container) → div*2 → img/div → a/p
-*/
-
-.blog-main {
-    display: grid;
-    row-gap: 2rem;
-
-    /* ===========M1=========== */
-    /* SECTION
-    → img
-    */
-    >section:nth-of-type(1) {
-        justify-self: center;
-        padding: 2rem 0;
-
-        >img {
-            width: 100%;
-        }
-    }
-
-    /* ===========M2=========== */
-    /* SECTION
-    → h5
-    → article → h2/p 
-    */
-    >section:nth-of-type(2) {
-        width: 80%;
-        justify-self: center;
-        display: inherit;
-        gap: 3rem;
-
-        >h5 {
-            padding-bottom: 1rem;
-            border-bottom: .2rem solid var(--color-cuarto);
-        }
-
-        >article {
-
-            >h2 {}
-
-            >p {
-                padding-top: 3rem;
-            }
-        }
-    }
-}
-
-
-/* ===========MAIN=========== */
-/* ===========MAIN-PERFIL=========== */
-
-/* MAIN
-→ section(expositor-container) → div*2 ...
-→ section(catalogo-container) → h3/div → article → img/h4/p/a → button
-→ section(contacto-container) → div*2 → img/div → a/p
-*/
-
-.perfil-main {}
-
 /* ===========FOOTER=========== */
 
 footer {
     margin-top: 7rem;
-    height: 60px;
+    height: 6rem;
     background-color: var(--color-primario);
-    box-shadow: 0px 20px 6rem 6rem var(--color-tercero),
-        inset 0px 0px 20px 1px var(--color-tercero);
+    box-shadow: 0px 2rem 6rem 6rem var(--color-tercero),
+        inset 0px 0px 2rem .1rem var(--color-tercero);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -334,14 +168,6 @@ footer {
 
 /* ===========CLASES=========== */
 
-.home-body {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
 .no-margin-top-footer {
     /* 
     → BLOG
@@ -352,7 +178,7 @@ footer {
 
 .expositor-container {
     /* 
-    → BLOG = M1
+    → BLOGS = M1
     → PERFIL = M1
     */
     /* ===========M1=========== */
@@ -372,19 +198,14 @@ footer {
         */
     >div:nth-of-type(1) {
         display: inherit;
-        grid-template: 25px 1fr/ 1fr;
-        gap: 5px 0;
+        gap: .5rem;
 
         >h4 {
             grid-area: 1/1;
         }
 
         >div {
-            grid-area: 2/1;
-
-            >img {
-                width: 329px;
-            }
+            justify-items: center;
         }
     }
 
@@ -409,44 +230,13 @@ footer {
             font-size: 2rem;
             align-self: center;
         }
-
-        >a {
-            grid-area: 3/1;
-            align-self: center;
-            width: 60px;
-            height: 40px;
-
-            >button {
-                font-weight: bold;
-                width: 70px;
-                height: 40px;
-                border-radius: 20%;
-                border: 3px solid var(--color-secundario);
-                cursor: pointer;
-                transition: 300ms;
-                background-image: linear-gradient(150deg,
-                        var(--color-tercero),
-                        #f9e3d9,
-                        var(--color-tercero));
-
-                &:hover {
-                    background-color: var(--color-secundario);
-                    background-image: none;
-                    transition: 300ms;
-                }
-
-                &:active {
-                    transform: scale(2);
-                }
-            }
-        }
     }
 }
 
 .catalogo-container {
 
     /* 
-    → BLOG = M2
+    → BLOGS = M2
     → PERFIL = M2
     */
     /* ===========M2=========== */
@@ -472,7 +262,7 @@ footer {
     /* ===========M2.2=========== */
     >div {
         display: inherit;
-        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        grid-template: auto / repeat(3, 1fr);
         justify-items: center;
         margin-top: 4rem;
         gap: 50px 0;
@@ -485,9 +275,6 @@ footer {
             padding: 1rem;
             border-radius: 10px;
 
-            >img {
-                width: 100%;
-            }
 
             >h4 {
                 margin: 10px 0;
@@ -496,30 +283,6 @@ footer {
             >p {
                 margin-bottom: 20px;
                 font-size: 1.5rem;
-            }
-
-            >a {
-                justify-self: center;
-
-                >button {
-                    font-weight: bold;
-                    width: 70px;
-                    height: 40px;
-                    border-radius: 20%;
-                    border: 3px solid var(--color-secundario);
-                    cursor: pointer;
-                    transition: 300ms;
-                    background-image: linear-gradient(150deg,
-                            var(--color-tercero),
-                            #f9e3d9,
-                            var(--color-tercero));
-
-                    &:hover {
-                        background-color: var(--color-secundario);
-                        background-image: none;
-                        transition: 300ms;
-                    }
-                }
             }
         }
     }
@@ -578,21 +341,31 @@ footer {
 /* ===========QUERIES=========== */
 
 @media (max-width: 700px) {
-    .expositor-container {
+
+    .catalogo-container>div {
+        grid-template: auto / 1fr;
+    }
+
+    .perfil-main>section:nth-of-type(1),
+    .blogs-main>section:nth-of-type(1) {
         grid-template: 2fr/ 1fr;
-        justify-items: center;
-        padding: 0;
 
         >div:nth-of-type(1) {
-            gap: 1rem 0;
-
+            gap: 1rem;
 
             >h4 {
+                margin-left: 0;
                 text-align: center;
+            }
+
+            >div {
+                display: inherit;
             }
         }
 
         >div:nth-of-type(2) {
+            margin: 2rem;
+
             >h2 {
                 text-align: center;
             }
@@ -602,7 +375,19 @@ footer {
                 justify-self: center;
             }
         }
+    }
+
+    .contacto-container>div {
+        width: 100%;
+    }
+}
 
 
+@media (max-width: 500px) {
+
+    .contacto-container {
+        flex-direction: column-reverse;
+        height: 40dvh;
+        padding-bottom: 0;
     }
 }

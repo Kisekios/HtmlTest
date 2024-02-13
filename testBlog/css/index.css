@@ -1,0 +1,98 @@
+/* ===========MAIN=========== */
+/* ===========MAIN-INDEX=========== */
+
+/* MAIN
+→ section ...
+*/
+
+.home-main {
+    height: 82dvh;
+    display: flex;
+    justify-content: center;
+    background-image: url('../assets/img/Gura.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    /* ===========M1=========== */
+    /* SECTION
+    → p
+    → button → a → span 
+    */
+    >section {
+        height: 80dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        /* ===========M1.1=========== */
+        >p {
+            display: flex;
+            justify-content: center;
+            width: 45rem;
+            font-size: 4.5rem;
+            font-family: serif;
+            font-style: italic;
+            font-weight: bolder;
+            color: var(--color-text-primario);
+            border-radius: 5%;
+            box-shadow: 0 0 2rem 1rem white,
+                inset 0px 0px 3rem 1rem white;
+            margin-bottom: 30rem;
+        }
+
+        /* ===========M1.2=========== */
+        /* BUTTON
+        → a → span
+        */
+        >button {
+            align-self: center;
+            width: 15rem;
+            border: 0;
+            background-image: linear-gradient(150deg,
+                    #f9e3d9,
+                    var(--color-tercero),
+                    #a7c7d6);
+            border-radius: 1rem;
+            display: flex;
+            font-size: 1.8rem;
+            padding: .6rem;
+            cursor: pointer;
+            transition: 300ms;
+            box-shadow: 0 0 1rem .5rem var(--color-tercero);
+
+            >a {
+                background-color: #111111fd;
+                padding: 1rem 2rem;
+                border-radius: .6rem;
+                transition: 300ms;
+
+                >span {
+                    color: white;
+                    font-weight: bold;
+
+                }
+            }
+
+            &:active {
+                transform: scale(2);
+            }
+
+            &:hover>a {
+                font-weight: bolder;
+                background: none;
+            }
+        }
+    }
+}
+
+
+/* ===========CLASES=========== */
+
+.home-body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

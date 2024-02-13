@@ -1,0 +1,33 @@
+/* ===========MAIN=========== */
+/* ===========MAIN-PERFIL=========== */
+
+/* MAIN
+→ section(expositor-container) → div*2 ...
+→ section(catalogo-container) → h3/div → article → img/h4/p/a → button
+→ section(contacto-container) → div*2 → img/div → a/p
+*/
+
+.perfil-main {
+    >section:nth-of-type(1) {
+        >div:nth-of-type(1) {
+            grid-template: 2 / 1fr;
+
+            >h4 {
+                font-style: italic;
+                grid-area: 2/1;
+                margin-left: 5rem;
+            }
+
+            >div {
+                grid-area: 1/1;
+                display: inherit;
+
+                >img {
+                    min-width: 329px;
+                    width: 90%;
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
