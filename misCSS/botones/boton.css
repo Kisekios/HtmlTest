@@ -1,0 +1,188 @@
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+    & a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: black;
+    }
+
+    & p {
+        font-size: 1.6rem;
+    }
+
+    & h1 {
+        font-size: 4rem;
+    }
+
+    & h2 {
+        font-size: 3.5rem;
+    }
+
+    & h3 {
+        font-size: 3rem;
+    }
+
+    & h4 {
+        font-size: 2.5rem;
+    }
+
+    & h5 {
+        font-size: 2rem;
+    }
+
+    & h6 {
+        font-size: 1.5rem;
+    }
+
+    & img {
+        border-radius: 10px;
+    }
+}
+
+/* ===========MAIN=========== */
+
+/* MAIN
+→ section → botón → div*3
+→ section → botón 
+→ section → botón → h1
+*/
+
+main {
+    >section:nth-of-type(1) {
+        margin: 3rem;
+
+        >button {
+            display: flex;
+            flex-direction: column;
+            inline-size: 3rem;
+            block-size: 3rem;
+            border: none;
+            background-color: transparent;
+            gap: .85rem;
+
+            >div {
+                background-color: black;
+                block-size: .2rem;
+                inline-size: 100%;
+                border-radius: .5rem;
+                transition: all .5s;
+                transform-origin: left;
+            }
+
+            &:hover {
+                >div:nth-of-type(1) {
+                    transform: rotate(45deg);
+                }
+
+                >div:nth-of-type(2) {
+                    opacity: 0;
+                }
+
+                >div:nth-of-type(3) {
+                    transform: rotate(-45deg);
+                }
+            }
+
+        }
+    }
+
+    >section:nth-of-type(2) {
+        margin: 3rem;
+
+        >button {
+            font-size: 4rem;
+            background-color: black;
+            color: white;
+            text-shadow: 0 0 10px #09f;
+            padding: 1rem;
+            border-radius: 1.2rem;
+            cursor: pointer;
+            position: relative;
+
+            &::before {
+                content: '';
+                z-index: -1;
+                position: absolute;
+                inset-inline-start: -1.1rem;
+                inset-block-start: -.5rem;
+                inline-size: 110%;
+                block-size: 120%;
+                background: linear-gradient(45deg,
+                        red, blue, deeppink, blue,
+                        red, blue, deeppink, blue);
+                filter: blur(5px);
+                background-size: 800%;
+                border-radius: inherit;
+                animation: glowing 20s linear infinite;
+            }
+        }
+    }
+
+    >section:nth-of-type(3) {
+        margin: 3rem;
+
+        >button {
+            color: white;
+            text-shadow: 0 0 10px #09f;
+            padding: .5rem;
+            background-color: transparent;
+            border-radius: 1.2rem;
+            cursor: pointer;
+            position: relative;
+            border: .5rem solid black;
+
+            >h1 {
+                inline-size: 200px;
+                background-color: black;
+                mix-blend-mode: multiply;
+                border-radius: inherit;
+            }
+
+            &::before {
+                content: '';
+                z-index: -1;
+                position: absolute;
+                inset-inline-start: 0rem;
+                inset-block-start: 0rem;
+                inline-size: 100%;
+                block-size: 100%;
+                background: linear-gradient(45deg,
+                        white, aqua, white, deepskyblue,
+                        white, aqua, white, deepskyblue);
+                background-size: 800%;
+                animation: glowing 20s linear infinite;
+            }
+        }
+    }
+}
+
+
+/* ===========ANIMACIONES=========== */
+
+/* ESTILO NEON 
+→ botón mágico
+*/
+
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
