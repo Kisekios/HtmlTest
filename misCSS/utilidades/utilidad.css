@@ -69,7 +69,7 @@ main {
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            animation: loope .5s linear infinite;
+            animation: loop .5s linear infinite;
 
             >div {
                 position: absolute;
@@ -84,7 +84,7 @@ main {
     }
 }
 
-@keyframes loope {
+@keyframes loop {
     0% {
         background-image: conic-gradient(at 50% 50%, black, blue, black 20%)
     }
