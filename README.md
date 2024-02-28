@@ -29,6 +29,14 @@
     → scroll para ir mostrando mas imagenes
 
 
+* Javascript
+- 1 HTML
+- 1 CSS
+- 1 JS
+
+→ Reto juego de cartas 21
+
+
 * Se eliminaron varios archivos HTML/CSS de test pasados.
 
--> Next: manejo de tailwind.
+-> Next: retos código JS → generar oponente y botón de << Plantar >>

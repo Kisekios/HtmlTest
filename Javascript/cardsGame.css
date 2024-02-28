@@ -1,0 +1,144 @@
+/* VARIABLES ROOtT/FUENTES */
+
+/* VALOR FUENTES
+→ 'Roboto', sans-serif;
+→ 'Protest Revolution', sans-serif;
+*/
+
+:root {
+    --color-primario: #0957b1;
+    --color-secundario: #e9f3ff;
+    --color-tercero: #25d0ea;
+    --color-cuarto: #8f969fa3;
+    --color-text-primario: hsl(240 100% 50% / 1);
+}
+
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    & a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: black;
+    }
+
+    & p {
+        font-size: 1.6rem;
+    }
+
+    & h1 {
+        font-size: 4rem;
+    }
+
+    & h2 {
+        font-size: 3.5rem;
+    }
+
+    & h3 {
+        font-size: 3rem;
+    }
+
+    & h4 {
+        font-size: 2.5rem;
+    }
+
+    & h5 {
+        font-size: 2rem;
+    }
+
+    & h6 {
+        font-size: 1.5rem;
+    }
+
+    & img {
+        border-radius: 10px;
+    }
+}
+
+
+/* ===========HEADER=========== */
+
+header {
+    block-size: 15dvh;
+    inline-size: 100%;
+    background-color: var(--color-cuarto);
+    display: flex;
+    place-content: center;
+    align-items: center;
+    color: var(--color-secundario);
+}
+
+/* ===========MAIN=========== */
+
+/* MAIN
+→ section → div*2
+*/
+
+main {
+    background-color: var(--color-primario);
+    inline-size: 100%;
+    block-size: 70dvh;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    >section {
+        display: inherit;
+        flex-direction: column;
+        justify-content: space-between;
+        block-size: 70%;
+        align-items: center;
+
+        >div {
+            background-color: var(--color-secundario);
+            display: inherit;
+            place-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+        }
+
+        >div:nth-of-type(1) {
+            inline-size: 7rem;
+            block-size: 10rem;
+        }
+
+        >div:nth-of-type(2) {
+            background-color: transparent;
+            block-size: 10rem;
+            inline-size: auto;
+            display: inherit;
+            flex-direction: row;
+            gap: 2rem;
+
+            >div {
+                border-radius: inherit;
+                background-color: white;
+                inline-size: 8rem;
+                block-size: inherit;
+                display: inherit;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+            }
+        }
+    }
+
+    >button {
+        margin-top: 3rem;
+    }
+}
