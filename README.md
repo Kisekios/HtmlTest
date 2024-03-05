@@ -30,13 +30,19 @@
 
 
 * Javascript
-- 1 HTML
-- 1 CSS
-- 1 JS
+- Juego de cartas 21
+→ 1 HTML
+→ 1 CSS
+→ 1 JS
 
-→ Reto juego de cartas 21
+- Arkanoid
+→ 1 HTML con JS y CSS en el propio archivo HTML (JS y CSS en linea)
+
 
 
 * Se eliminaron varios archivos HTML/CSS de test pasados.
 
--> Next: retos código JS → generar oponente y botón de << Plantar >>
+-> Next:
+→ retos código JS → generar oponente y botón de << Plantar >>
+→ Corregir error Arkanoid de colisión con los bricks en X
+
