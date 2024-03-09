@@ -8,10 +8,12 @@ let cartasJugador = [];
 let valorCartasJugador = 0;
 let totalCartasEnMano = 0;
 
-function Cartas(numero, color, simbolo) {
-    this.numero = numero;
-    this.color = color;
-    this.simbolo = simbolo;
+class Cartas {
+    constructor(numero, color, simbolo) {
+        this.numero = numero;
+        this.color = color;
+        this.simbolo = simbolo;
+    }
 }
 
 function nuevoMazo() {
