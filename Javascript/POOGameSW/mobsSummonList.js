@@ -1,36 +1,43 @@
-import { doncellaDemonio, señoraDelInfierno, chicaOculta, onmyouji, reinaDelDesierto } from "./mobsfamilies/doncellaDemonio.js";
+import { pergaminos } from "./pergamino.js"
 
-//console.log(doncellaDemonio, señoraDelInfierno, chicaOculta, onmyouji, reinaDelDesierto)
-function invocacion(numeroInvocaciones) {
+
+function invocacion(numeroInvocaciones, tipoPergamino) {
     let invocacionNum = 0;
 
     let resultadoInvocacion = {
+        position: [],
         nat5: {
             cantidad: 0,
-            position: []
+            index: []
         },
         nat4: {
             cantidad: 0,
+            index: []
         },
         nat3: {
-            cantidad: 0
+            cantidad: 0,
+            index: []
         }
     }
     while (invocacionNum < numeroInvocaciones) {
-        const calidadMobInvocado = Math.floor(Math.random() * 200) + 1;
-        if (calidadMobInvocado === 1) {
+        let mob = tipoPergamino.invocar(tipoPergamino.atributos)
+        if (mob.calidad === 5) {
             resultadoInvocacion.nat5.cantidad++;
-            resultadoInvocacion.nat5.position.push(invocacionNum)
-        } else if (calidadMobInvocado > 1 && calidadMobInvocado <= 17) {
+            resultadoInvocacion.position.push(mob)
+            resultadoInvocacion.nat5.index.push(invocacionNum)
+        } else if (mob == "4 estrellas"/* mob.calidad === 4 */) {
             resultadoInvocacion.nat4.cantidad++;
-        } else { resultadoInvocacion.nat3.cantidad++ }
+            resultadoInvocacion.position.push(mob)
+            resultadoInvocacion.nat4.index.push(invocacionNum)
+        } else {
+            resultadoInvocacion.nat3.cantidad++;
+            resultadoInvocacion.position.push(mob)
+            resultadoInvocacion.nat3.index.push(invocacionNum)
+        }
         invocacionNum++;
     }
     return resultadoInvocacion
 }
 
-
-const invocaciones = invocacion(500)
-
-
-console.log(invocaciones)
+let resultadoInvocacion = invocacion(10, pergaminos[1])
+console.log(resultadoInvocacion)

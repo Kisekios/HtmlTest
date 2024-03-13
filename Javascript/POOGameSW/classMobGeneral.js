@@ -1,6 +1,7 @@
 class MobGeneral {
     constructor({
         nombre = string,
+        calidad = number,
         nivel = 1,
         vida = number,
         ataque = number,
@@ -13,6 +14,7 @@ class MobGeneral {
 
     }) {
         this.nombre = nombre;
+        this.calidad = calidad;
         this.nivel = nivel;
         this.vida = vida;
         this.ataque = ataque;

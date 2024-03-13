@@ -6,6 +6,7 @@ import { MobFamily } from "./classMobFamily.js"
 function doncellasDemonio() {
     const bloodya = new FuegoMobGeneral({
         nombre: "Bloodya",
+        calidad: 5,
         nivel: 40,
         vida: 10050,
         ataque: 845,
@@ -15,6 +16,7 @@ function doncellasDemonio() {
     })
     const irene = new AguaMobGeneral({
         nombre: "Irene",
+        calidad: 5,
         nivel: 40,
         vida: 11850,
         ataque: 736,
@@ -26,6 +28,7 @@ function doncellasDemonio() {
     const layla = new VientoMobGeneral({
         nombre: "Layla",
         nivel: 40,
+        calidad: 5,
         vida: 10875,
         ataque: 801,
         defensa: 615,
@@ -34,6 +37,7 @@ function doncellasDemonio() {
     })
     const jessica = new LuzMobGeneral({
         nombre: "Jessica",
+        calidad: 5,
         nivel: 40,
         vida: 10050,
         ataque: 725,
@@ -44,6 +48,7 @@ function doncellasDemonio() {
     )
     const liliana = new OscuridadMobGeneral({
         nombre: "Liliana",
+        calidad: 5,
         nivel: 40,
         vida: 10710,
         ataque: 878,
@@ -57,6 +62,7 @@ function doncellasDemonio() {
 function señorasDelInfierno() {
     const raki = new FuegoMobGeneral({
         nombre: "Raki",
+        calidad: 5,
         nivel: 40,
         vida: 10050,
         ataque: 856,
@@ -66,6 +72,7 @@ function señorasDelInfierno() {
     })
     const beth = new AguaMobGeneral({
         nombre: "Beth",
+        calidad: 5,
         nivel: 40,
         vida: 10215,
         ataque: 834,
@@ -75,6 +82,7 @@ function señorasDelInfierno() {
     })
     const ethna = new VientoMobGeneral({
         nombre: "Ethna",
+        calidad: 5,
         nivel: 40,
         vida: 10380,
         ataque: 845,
@@ -83,6 +91,7 @@ function señorasDelInfierno() {
     })
     const asima = new LuzMobGeneral({
         nombre: "Asima",
+        calidad: 5,
         nivel: 40,
         vida: 10710,
         ataque: 812,
@@ -92,6 +101,7 @@ function señorasDelInfierno() {
     })
     const craka = new OscuridadMobGeneral({
         nombre: "Craka",
+        calidad: 5,
         nivel: 40,
         vida: 11535,
         ataque: 769,
@@ -104,6 +114,7 @@ function señorasDelInfierno() {
 function chicasOcultas() {
     const rica = new FuegoMobGeneral({
         nombre: "Rica",
+        calidad: 5,
         nivel: 40,
         vida: 10215,
         ataque: 823,
@@ -113,6 +124,7 @@ function chicasOcultas() {
     })
     const anavel = new AguaMobGeneral({
         nombre: "Anavel",
+        calidad: 5,
         nivel: 40,
         vida: 10710,
         ataque: 769,
@@ -122,6 +134,7 @@ function chicasOcultas() {
     })
     const charlotte = new VientoMobGeneral({
         nombre: "Charlotte",
+        calidad: 5,
         nivel: 40,
         vida: 10380,
         ataque: 845,
@@ -131,6 +144,7 @@ function chicasOcultas() {
     })
     const lora = new LuzMobGeneral({
         nombre: "Lora",
+        calidad: 5,
         nivel: 40,
         vida: 11850,
         ataque: 692,
@@ -139,6 +153,7 @@ function chicasOcultas() {
     })
     const nicki = new OscuridadMobGeneral({
         nombre: "Nicki",
+        calidad: 5,
         nivel: 40,
         vida: 10215,
         ataque: 812,
@@ -152,6 +167,7 @@ function chicasOcultas() {
 function onmyoujis() {
     const tomoe = new FuegoMobGeneral({
         nombre: "Tomoe",
+        calidad: 5,
         nivel: 40,
         vida: 11535,
         ataque: 615,
@@ -160,6 +176,7 @@ function onmyoujis() {
     })
     const shizuka = new AguaMobGeneral({
         nombre: "Shizuka",
+        calidad: 5,
         nivel: 40,
         vida: 11040,
         ataque: 659,
@@ -168,6 +185,7 @@ function onmyoujis() {
     })
     const giou = new VientoMobGeneral({
         nombre: "Giou",
+        calidad: 5,
         nivel: 40,
         vida: 11205,
         ataque: 626,
@@ -176,6 +194,7 @@ function onmyoujis() {
     })
     const seimei = new LuzMobGeneral({
         nombre: "Seimei",
+        calidad: 5,
         nivel: 40,
         vida: 11370,
         ataque: 648,
@@ -185,6 +204,7 @@ function onmyoujis() {
     })
     const douman = new OscuridadMobGeneral({
         nombre: "Douman",
+        calidad: 5,
         nivel: 40,
         vida: 12180,
         ataque: 604,
@@ -198,6 +218,7 @@ function onmyoujis() {
 function reinasDelDesierto() {
     const sekhmet = new FuegoMobGeneral({
         nombre: "Sekhmet",
+        calidad: 5,
         nivel: 40,
         vida: 11205,
         ataque: 714,
@@ -206,6 +227,7 @@ function reinasDelDesierto() {
     })
     const bastet = new AguaMobGeneral({
         nombre: "Bastet",
+        calidad: 5,
         nivel: 40,
         vida: 11850,
         ataque: 637,
@@ -215,6 +237,7 @@ function reinasDelDesierto() {
     })
     const hathor = new VientoMobGeneral({
         nombre: "Hathor",
+        calidad: 5,
         nivel: 40,
         vida: 11040,
         ataque: 692,
@@ -224,6 +247,7 @@ function reinasDelDesierto() {
     })
     const isis = new LuzMobGeneral({
         nombre: "Isis",
+        calidad: 5,
         nivel: 40,
         vida: 11700,
         ataque: 637,
@@ -233,6 +257,7 @@ function reinasDelDesierto() {
     })
     const nephthys = new OscuridadMobGeneral({
         nombre: "Nephthys",
+        calidad: 5,
         nivel: 40,
         vida: 11370,
         ataque: 725,
@@ -243,8 +268,10 @@ function reinasDelDesierto() {
     return new MobFamily(sekhmet, bastet, hathor, isis, nephthys);
 }
 
-export const doncellaDemonio = doncellasDemonio();
-export const señoraDelInfierno = señorasDelInfierno();
-export const chicaOculta = chicasOcultas();
-export const onmyouji = onmyoujis();
-export const reinaDelDesierto = reinasDelDesierto();
+const doncellaDemonio = doncellasDemonio();
+const señoraDelInfierno = señorasDelInfierno();
+const chicaOculta = chicasOcultas();
+const onmyouji = onmyoujis();
+const reinaDelDesierto = reinasDelDesierto();
+
+export const nat5List = [doncellaDemonio,señoraDelInfierno,chicaOculta,onmyouji,reinaDelDesierto]
