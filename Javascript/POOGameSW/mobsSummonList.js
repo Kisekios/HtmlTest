@@ -25,7 +25,7 @@ function invocacion(numeroInvocaciones, tipoPergamino) {
             resultadoInvocacion.nat5.cantidad++;
             resultadoInvocacion.position.push(mob)
             resultadoInvocacion.nat5.index.push(invocacionNum)
-        } else if (mob == "4 estrellas"/* mob.calidad === 4 */) {
+        } else if (mob.calidad === 4) {
             resultadoInvocacion.nat4.cantidad++;
             resultadoInvocacion.position.push(mob)
             resultadoInvocacion.nat4.index.push(invocacionNum)
