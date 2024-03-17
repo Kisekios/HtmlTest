@@ -38,7 +38,10 @@
 - Arkanoid
 → 1 HTML con JS y CSS en el propio archivo HTML (JS y CSS en linea)
 
-
+- Summoner Wars
+→ Clases de familias de mobs, atributos de los mobs, y creación de 5 familias por nat5,nat4 y nat 3.
+→ Método de invocacion de mobs por suerte probabilidades (entre 200) varias según pergaminos.
+→ Variedad de clases de pergaminos, desde invocacion de mobs elementales, de luz y oscuridad y todos los mobs en general.
 
 * Se eliminaron varios archivos HTML/CSS de test pasados.
 

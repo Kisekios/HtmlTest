@@ -1,5 +1,6 @@
 import { nat5List } from "./mobsfamilies/Nat5Estrellas.js";
 import { nat4List } from "./mobsfamilies/Nat4Estrellas.js"
+import { nat3List } from "./mobsfamilies/Nat3Estrellas.js"
 
 class Pergamino {
     constructor({
@@ -34,7 +35,12 @@ class Pergamino {
             let atributo = Object.keys(nat4List[selectMobFamilies])
             let selection = atributo[elemento]
             return nat4List[selectMobFamilies][selection]
-        } else { return ("3 estrellas") }
+        } else { 
+            const selectMobFamilies = Math.floor(Math.random() * nat3List.length)
+            let atributo = Object.keys(nat4List[selectMobFamilies])
+            let selection = atributo[elemento]
+            return nat3List[selectMobFamilies][selection]
+        }
     }
 }
 
