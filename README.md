@@ -48,4 +48,5 @@
 -> Next:
 → retos código JS → generar oponente y botón de << Plantar >>
 → Corregir error Arkanoid de colisión con los bricks en X
+→ Agregar habilidades a los mobs en SW.
 
