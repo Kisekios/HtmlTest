@@ -1,4 +1,4 @@
-/* VARIABLES ROOtT/FUENTES */
+/* VARIABLES ROOT/FUENTES */
 
 /* VALOR FUENTES
 → 'Roboto', sans-serif;
@@ -8,7 +8,7 @@
 :root {
     --color-primario: #0957b1;
     --color-secundario: #e9f3ff;
-    --color-tercero: #25d0ea;
+    --color-tercero: #25cfe9;
     --color-cuarto: #8f969fa3;
     --color-text-primario: hsl(240 100% 50% / 1);
 }

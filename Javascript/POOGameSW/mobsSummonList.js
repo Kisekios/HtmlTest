@@ -39,5 +39,5 @@ function invocacion(numeroInvocaciones, tipoPergamino) {
     return resultadoInvocacion
 }
 
-let resultadoInvocacion = invocacion(10, pergaminos[1])
+let resultadoInvocacion = invocacion(3, pergaminos[1])
 console.log(resultadoInvocacion)
